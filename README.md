@@ -2,4 +2,4 @@
 2. need to normalize image after augmentation as it changes mean and stds
 3. torch.conv2d expects (N,C,H,W)
 4. F.affine_grid(theta, size) theta is backward matrix that takes target coordinates and outputs source coordinates. And the target values lies in the range [-1,1]
-5. F.grid_sample(input, grid, mode='bilinear', padding_mode='zeros'), grid specifies the sampling pixel locations normalized by the input spatial dimensions. Therefore, it should have most values in the range of [-1, 1]. For example, values x = -1, y = -1 is the left-top pixel of input, and values x = 1, y = 1 is the right-bottom pixel of input.
+5. F.grid_sample(input, grid, mode='bilinear', padding_mode='zeros'), grid specifies the sampling pixel locations normalized by the input spatial dimensions. Therefore, it should have most values in the range of [-1, 1]. For example, values x = -1, y = -1 is the left-top pixel of input, and values x = 1, y = 1 is the right-bottom pixel of input. 
