@@ -5,8 +5,8 @@
 5. F.grid_sample(input, grid, mode='bilinear', padding_mode='zeros'), grid specifies the sampling pixel locations normalized by the input spatial dimensions. Therefore, it should have most values in the range of [-1, 1]. For example, values x = -1, y = -1 is the left-top pixel of input, and values x = 1, y = 1 is the right-bottom pixel of input. 
 6. MaskRCNN data: return [img1,img2...], [target1,target2...]  
 use collate_fn in DataLoader  
-> def collate_fn(batch):
->     return tuple(zip(*batch))
+> def collate_fn(batch):  
+>     return tuple(zip(*batch))  
 img is a tensor of shape (C,H,W) in [0,1] range  
 target is a dict with:  
                       "boxes"  : [[x1,y1,x2,y2],[],...[]] of shape (N,4)  
