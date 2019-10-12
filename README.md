@@ -6,7 +6,8 @@
 6. MaskRCNN data: return [img1,img2...], [target1,target2...]  
 use collate_fn in DataLoader  
 > def collate_fn(batch):  
->     return tuple(zip(*batch))  
+>       return tuple(zip(*batch))  
+
 img is a tensor of shape (C,H,W) in [0,1] range  
 target is a dict with:  
                       "boxes"  : [[x1,y1,x2,y2],[],...[]] of shape (N,4)  
