@@ -3,8 +3,8 @@
 3. torch.conv2d expects (N,C,H,W)
 4. F.affine_grid(theta, size) theta is backward matrix that takes target coordinates and outputs source coordinates. And the target values lies in the range [-1,1]
 5. F.grid_sample(input, grid, mode='bilinear', padding_mode='zeros'), grid specifies the sampling pixel locations normalized by the input spatial dimensions. Therefore, it should have most values in the range of [-1, 1]. For example, values x = -1, y = -1 is the left-top pixel of input, and values x = 1, y = 1 is the right-bottom pixel of input. 
-6. MaskRCNN data: return img, target
+6. MaskRCNN data: return img, target  
 target is a dict with "boxes"  : [[x1,y1,x2,y2],[],...[]] of shape (N,4)  
-                      "labels" : [c1,c2,...] of shape (N,)
-                      "masks"  : of shape (N,h,w) for each n, it is a array of 0 and 1.
+                      "labels" : [c1,c2,...] of shape (N,)  
+                      "masks"  : of shape (N,h,w) for each n, it is a array of 0 and 1.  
 
