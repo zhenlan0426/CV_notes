@@ -1,5 +1,6 @@
 1. albumentations supports uint8 and float32 inputs. For the latter, all values must lie in the range [0.0, 1.0]. And should be of shape (H,W,C)
 1. after some albumentations bbox transformation, the bbox is no longer tight. So if mask is available, transform mask and then calculate bbox from mask.
+1. be careful about the bbox convention in albumentations: https://github.com/albu/albumentations/blob/master/notebooks/example_bboxes.ipynb
 2. need to normalize image after augmentation as it changes mean and stds
 3. torch.conv2d expects (N,C,H,W)
 4. F.affine_grid(theta, size) theta is backward matrix that takes target coordinates and outputs source coordinates. And the target values lies in the range [-1,1]
